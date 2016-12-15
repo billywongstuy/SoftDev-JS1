@@ -1,12 +1,12 @@
 var items = document.getElementsByTagName("li");
 
-var addListElement = function() {
-
+var addListElement = function(e) {
+	//Hint: You should do this last
 }
 document.getElementById("b").addEventListener("click",addListElement);
 
 
-var removeListElement = function() {
+var removeListElement = function(e) {
 
 }
 
