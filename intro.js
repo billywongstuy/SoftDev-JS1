@@ -1,3 +1,5 @@
+var items = document.getElementsByTagName("li");
+
 var addListElement = function() {
 
 }
@@ -7,13 +9,12 @@ document.getElementById("b").addEventListener("click",addListElement);
 var removeListElement = function() {
 
 }
-//when list element is clicked
+
+
 
 
 
 var defHeading = document.getElementById("h").innerHTML;
-
-var items = document.getElementsByTagName("li");
 
 var hoverChangeHeading = function(e) {
 	document.getElementById("h").innerHTML = this.innerHTML;
