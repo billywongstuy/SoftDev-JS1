@@ -4,6 +4,9 @@ var addListElement = function(e) {
     var thelist = document.getElementById("thelist");
     var newitem = document.createElement("li");
     var num = items.length;
+	newitem.addEventListener("mouseover",hoverChangeHeading);
+	newitem.addEventListener("mouseout",resetHeading);
+	newitem.addEventListener("click",removeListElement);
     newitem.innerHTML = "item " + num;
     thelist.appendChild(newitem);
     
