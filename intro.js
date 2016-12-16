@@ -35,7 +35,42 @@ for (var i = 0; i < items.length; i++) {
 
 var resetHeading = function(e) {
     document.getElementById("h").innerHTML = defHeading;
-}
+};
 for (var i = 0; i < items.length; i++) {
     items[i].addEventListener("mouseout",resetHeading);
 }
+
+
+
+var fibn = function(len) {
+    var a = 1;
+    var b = 1;
+    while (len > 1){
+	var newFib = a + b;   
+	a = b;
+	b = newFib;
+	len--;
+    }
+    return b;
+};
+
+var fibnR = function(len) {
+    if (len < 2){
+	return 1;
+    }
+    return fibnR(len-1)+ fibnR(len-2);
+};
+
+var fibfxn = function(e) {
+    var thelist = document.getElementById("fib");
+    var newitem = document.createElement("li");
+    var num = fibnR(thelist.childNodes.length)
+    newitem.innerHTML = num;    
+    thelist.appendChild(newitem);    
+    
+};
+
+document.getElementById("fbutton").addEventListener("click",fibfxn);
+
+
+
