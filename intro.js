@@ -77,6 +77,7 @@ var piList = document.getElementById("pi");
 
 var nPi = function(n) {
 	var aimAtOne = Math.floor(Math.PI * Math.pow(10,n));
+	console.log(aimAtOne);
 	while (aimAtOne >= 10) {
 		aimAtOne = aimAtOne % 10;
 	}
