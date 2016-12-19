@@ -93,3 +93,25 @@ var piAdd = function(e) {
 }
 
 document.getElementById("pibutton").addEventListener("click",piAdd);
+
+
+var factList = document.getElementById("fact");
+var nFact = function(n) {
+	console.log(n);
+	if (n <= 1) {
+		return 1;
+	}
+	return n * nFact(n-1);
+}
+
+var factAdd = function(e) {
+	var len = factList.childNodes.length;
+    var newitem = document.createElement("li");
+	num = nFact(len+1);
+    newitem.innerHTML = num;    
+    factList.appendChild(newitem);    
+}
+
+document.getElementById("factbutton").addEventListener("click",factAdd);
+
+
