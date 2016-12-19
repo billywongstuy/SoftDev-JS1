@@ -28,7 +28,7 @@ var defHeading = document.getElementById("h").innerHTML;
 
 var hoverChangeHeading = function(e) {
     document.getElementById("h").innerHTML = this.innerHTML;
-}
+};
 for (var i = 0; i < items.length; i++) {
     items[i].addEventListener("mouseover",hoverChangeHeading);
 }
@@ -73,4 +73,22 @@ var fibfxn = function(e) {
 document.getElementById("fbutton").addEventListener("click",fibfxn);
 
 
+var piList = document.getElementById("pi");
 
+var nPi = function(n) {
+	var aimAtOne = Math.floor(Math.PI * Math.pow(10,n));
+	while (aimAtOne >= 10) {
+		aimAtOne = aimAtOne % 10;
+	}
+	return aimAtOne;
+}
+
+var piAdd = function(e) {
+	var len = piList.childNodes.length;
+    var newitem = document.createElement("li");
+	num = nPi(len);
+    newitem.innerHTML = num;    
+    piList.appendChild(newitem);    
+}
+
+document.getElementById("pibutton").addEventListener("click",piAdd);
